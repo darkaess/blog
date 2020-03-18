@@ -10,9 +10,9 @@ This repo contains all contents of my blog. `src` branch contains source files a
 
 ## Framework
 
-The blog is powered by Hexo - NexT Gemini and hosted on Netlify. Other tools used in this blog are as follows:
+The blog is powered by Hexo - NexT Gemini and hosted on Aliyun OSS. Other tools used in this blog are as follows:
 
-* Comment System：Valine + LeanCloud
+* Comment System：Valine x LeanCloud
 * Website Traffic Statistics：LeanCloud + Google Analytics 
 * Static Assets Storage：Tencent Cloud Object Storage (COS)
 
