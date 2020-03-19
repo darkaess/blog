@@ -2,19 +2,9 @@
 
 [![Genertor](https://img.shields.io/badge/Generator-Hexo-0e83cd?&logo=hexo&style=flat-square)](https://hexo.io)
 [![Theme](https://img.shields.io/badge/Theme-NexT-181717.svg?&style=flat-square)](https://theme-next.org)
-[![Source](https://img.shields.io/badge/Source-GitHub-181717?&logo=github&style=flat-square)](https://github.com/lei2rock/blog)
-[![Deploy](https://img.shields.io/github/workflow/status/lei2rock/blog/Deployment?label=Deploy&logo=github&style=flat-square)](https://github.com/lei2rock/blog/actions)
-[![Host](https://img.shields.io/badge/Host-AliyunOSS-orange?&style=flat-square)](https://oss.console.aliyun.com)
+[![Deploy](https://img.shields.io/github/workflow/status/lei2rock/blog/Deployment?label=GitHub+Actions&logo=GitHub+Actions&style=flat-square)](https://github.com/lei2rock/blog/actions)
 
-This repo contains all contents of my blog. `src` branch contains source files and `master` branch includes static web files deployed by GitHub Actions.
-
-## Framework
-
-The blog is powered by Hexo - NexT Gemini and hosted on Aliyun OSS. Other tools used in this blog are as follows:
-
-* Comment System：Valine x LeanCloud
-* Website Traffic Statistics：LeanCloud + Google Analytics 
-* Static Assets Storage：Tencent Cloud Object Storage (COS)
+The `src` branch of this repo contains all source files of my blog.
 
 ## Copyright
 
