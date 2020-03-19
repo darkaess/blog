@@ -1,6 +1,4 @@
 User-agent: *
-Disallow: /images/
-Disallow: /photos/photoslist.json
-Disallow: /about/friends/friendslist.json
+Disallow: /page/
 
 Sitemap: https://blog.dlzhang.com/sitemap.xml
