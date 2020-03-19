@@ -40,12 +40,12 @@ custom_file_path:
 # ---------------------------------------------------------------
 
 favicon:
-  small: /images/favicon-16x16.png
-  medium: /images/favicon-32x32.png
-  apple_touch_icon: /images/apple-touch-icon.png
-  safari_pinned_tab: /images/safari-pinned-tab.svg
-  android_manifest: /images/site.webmanifest
-  ms_browserconfig: /images/browserconfig.xml
+  small: https://yun-1256060851.file.myqcloud.com/assets/img/favicon-16x16.png
+  medium: https://yun-1256060851.file.myqcloud.com/assets/img/favicon-32x32.png
+  apple_touch_icon: https://yun-1256060851.file.myqcloud.com/assets/img/apple-touch-icon.png
+  safari_pinned_tab: https://yun-1256060851.file.myqcloud.com/assets/img/safari-pinned-tab.svg
+  android_manifest: https://yun-1256060851.file.myqcloud.com/assets/img/site.webmanifest
+  ms_browserconfig: https://yun-1256060851.file.myqcloud.com/assets/img/browserconfig.xml
 
 # Show multilingual switcher in footer.
 language_switcher: false
@@ -528,7 +528,7 @@ math:
 
 # Easily enable fast Ajax navigation on your website.
 # Dependencies: https://github.com/theme-next/theme-next-pjax
-pjax: false
+pjax: true
 
 # FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.
 # For more information: https://fancyapps.com/fancybox
@@ -921,7 +921,7 @@ vendors:
 
   # Internal version: 0.2.8
   # pjax: //cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js
-  pjax:
+  pjax: //cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js
 
   # FancyBox
   # jquery: //cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js
@@ -1008,6 +1008,6 @@ vendors:
   canvas_ribbon:
 
 # Assets
-css: https://yun-1256060851.file.myqcloud.com/assets/css
+css: https://yun-1256060851.file.myqcloud.com/assets/blog-css
 js: https://yun-1256060851.file.myqcloud.com/assets/js
-images: images
+images: https://yun-1256060851.file.myqcloud.com/assets/img

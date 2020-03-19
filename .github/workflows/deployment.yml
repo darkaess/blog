@@ -48,14 +48,38 @@ jobs:
       run: |
         yarn build 
 
-    - name: Upload css/js to COS
-      uses: zkqiang/tencent-cos-action@master
+    - name: Upload css to COS
+      uses: TencentCloud/cos-action@v1
       with:
-        args: upload -rs --delete public/css/ assets/css/ && upload -rs --delete public/js/ assets/js/
         secret_id: ${{ secrets.COS_SECRET_ID }}
         secret_key: ${{ secrets.COS_SECRET_KEY }}
-        bucket: ${{ secrets.COS_BUCKET }} #bucket name with id
-        region: ap-shanghai
+        cos_bucket: ${{ secrets.COS_BUCKET }}  #bucket name with id
+        cos_region: ${{ secrets.COS_REGION }} #with `ap-`
+        local_path: public/css/
+        remote_path: assets/blog-css/
+        clean: true
+
+    - name: Upload js to COS
+      uses: TencentCloud/cos-action@v1
+      with:
+        secret_id: ${{ secrets.COS_SECRET_ID }}
+        secret_key: ${{ secrets.COS_SECRET_KEY }}
+        cos_bucket: ${{ secrets.COS_BUCKET }}
+        cos_region: ${{ secrets.COS_REGION }} #with `ap-`
+        local_path: public/js/
+        remote_path: assets/js/
+        clean: true
+
+    - name: Upload images to COS
+      uses: TencentCloud/cos-action@v1
+      with:
+        secret_id: ${{ secrets.COS_SECRET_ID }}
+        secret_key: ${{ secrets.COS_SECRET_KEY }}
+        cos_bucket: ${{ secrets.COS_BUCKET }}
+        cos_region: ${{ secrets.COS_REGION }} #with `ap-`
+        local_path: source/images/
+        remote_path: assets/img/
+        clean: true
 
     - name: Setup OSS Util
       uses: manyuanrong/setup-ossutil@v1.0
@@ -64,11 +88,11 @@ jobs:
         access-key-id: "${{ secrets.OSS_KEY_ID }}"
         access-key-secret: "${{ secrets.OSS_KEY_SECRET }}"
 
-    - name: Clean Bucket & Deploy to Bucket
+    - name: Clean Bucket & Upload to OSS
       env:
         OSS_BUCKET: "${{ secrets.OSS_BUCKET }}" #bucket name without endpoint domain
       run: |
-        rm -rf public/css/ public/js/
+        rm -rf public/css/ public/js/ public/images/
         ossutil rm oss://${OSS_BUCKET}/ -rf
         ossutil cp public/ oss://${OSS_BUCKET}/ -rf
 
