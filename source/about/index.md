@@ -3,7 +3,7 @@ title: 关于更多
 comments: true
 ---
 
-{% img https://yun-1256060851.file.myqcloud.com/photos/浙大：新雪初霁（东教学楼）.jpg 500 浙江大学紫金港校区·启真湖 %}
+{% img https://yun-1256060851.file.myqcloud.com/images/photos/浙大：新雪初霁（东教学楼）.jpg 500 浙江大学紫金港校区·启真湖 %}
 
 {% centerquote %}
 大不自多，海纳江河。
