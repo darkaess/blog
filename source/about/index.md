@@ -3,7 +3,7 @@ title: 关于更多
 comments: true
 ---
 
-{% img https://yun-1256060851.file.myqcloud.com/images/photos/浙大：新雪初霁（东教学楼）.jpg 500 浙江大学紫金港校区·启真湖 %}
+![浙江大学紫金港校区·启真湖](https://yun-1256060851.file.myqcloud.com/images/photos/浙大：新雪初霁（东教学楼）.jpg!500x)
 
 {% centerquote %}
 大不自多，海纳江河。
@@ -23,4 +23,5 @@ comments: true
 　<i class="fa fa-fw fa-weibo"></i> [微博](https://weibo.com/1156774800)
 　<i class="fa fa-fw fa-twitter"></i> [Twitter](https://twitter.com/lei2rock)
 　<i class="fa fa-fw fa-github"></i> [GitHub](https://github.com/lei2rock)
-{% img https://yun-1256060851.file.myqcloud.com/images/wechat-channel.jpg 150 微信公众号：班班碎碎念 %}
+
+![微信公众号：班班碎碎念](https://yun-1256060851.file.myqcloud.com/images/wechat-channel.jpg!150x)
