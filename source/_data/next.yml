@@ -117,16 +117,17 @@ darkmode: false
 # When running the site in a subdirectory (e.g. yoursite.com/blog), remove the leading slash from link value (/archives -> archives).
 # External url should start with http:// or https://
 menu:
-  home: / || home
+  blog: / || check-circle
   overview: 
     default: /overview/ || th
-    series: /series/ || list
+    series: /series/ || cube
     tags: /tags/ || tags
   photos: /photos/ || camera-retro
   about:
     default: /about/ || location-arrow
     share: /share/ || share-alt
     friends: /friends/ || heart
+  home: https://dlzhang.com || home
 
 # Enable / Disable menu icons / item badges.
 menu_settings:

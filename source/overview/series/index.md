@@ -3,7 +3,7 @@ title: 专栏文章
 comments: false
 ---
 
-<center><i class="fa fa-fw fa-list"></i> 目前共计 5 个专栏</center>
+<center><i class="fa fa-cube"></i> 目前共计 5 个专栏</center>
 
 ## 政策讨论
 

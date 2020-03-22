@@ -1,6 +1,6 @@
 zh-CN:
   menu:
-    home: 博客首页
+    blog: 博客首页
     overview: 分类标签
     series: 专栏文章
     tags: 各种标签
@@ -8,6 +8,7 @@ zh-CN:
     about: 关于更多
     share: 好物分享
     friends: 小伙伴们
+    home: Homepage
     search: 搜索文章
   post:
     posted: " "
@@ -17,8 +18,8 @@ zh-CN:
       valine: 评论
   counter:
     tag_cloud:
-      other: '<i class="fa fa-fw fa-tags"></i> 目前共计 %d 个标签'
+      other: <i class="fa fa-fw fa-tags"></i> 目前共计 %d 个标签
     categories:
-      other: '<i class="fa fa-fw fa-th"></i> 目前共计 %d 个分类'
+      other: <i class="fa fa-fw fa-th"></i> 目前共计 %d 个分类
   reward:
     donate: <i class="fa fa-qrcode fa-2x" style="line-height:35px;"></i>
