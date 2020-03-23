@@ -164,8 +164,8 @@ photo.init();
 +  style: source/_data/styles.styl
 ```
 
-## 4. 开启 lazyload 和 fancybox
-在主题配置文件中，一步一步按照说明安装和开启 `lazyload` 和 `fancybox` 功能即可。
+## 4. 开启 fancybox
+在主题配置文件中，一步一步按照说明安装和开启 `fancybox` 即可。
 
 ## 5. 放入相册
 新建相册页面 ` hexo new page photos`，创建  `/source/photos/index.md`。编辑文档为以下内容：
