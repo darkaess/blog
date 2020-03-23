@@ -1,4 +1,4 @@
-# <div align="center"><a title="Donglei's blog repository" href="https://github.com/lei2rock/blog"><img align="center" height="75" src="https://user-images.githubusercontent.com/19180725/77292857-12320000-6d1c-11ea-87cf-9408f6f76a79.png"></a><br><a title="Donglei's blog repository" href="https://github.com/lei2rock/blog"><img align="center" height="45" src="https://user-images.githubusercontent.com/19180725/77292641-a8195b00-6d1b-11ea-8094-d6a0a1e39401.png"></a></div>
+# <div align="center"><a title="Donglei's blog repository" href="https://github.com/lei2rock/blog"><img align="center" height="100" src="https://user-images.githubusercontent.com/19180725/77292857-12320000-6d1c-11ea-87cf-9408f6f76a79.png"></a></div>
 
 <p align="center">
 <br>
