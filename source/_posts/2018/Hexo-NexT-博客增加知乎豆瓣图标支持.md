@@ -1,15 +1,11 @@
 ---
 title: Hexo NexT 博客增加知乎豆瓣图标支持
-categories:
-  - 随手记
-tags:
-  - blog
-  - CSS
-  - 技术
-date: '2018-06-13 04:21:54'
+categories: [随手记]
+tags: [blog, CSS, 技术]
 sticky: 0
 mathjax: false
 comments: true
+date: 2018-06-13 04:21:54
 ---
 
 因为 Hexo NexT 原始主题是采用了 Font Awesome 图标，并未包含如知乎、豆瓣这类中国大陆的社交网站图标。所以需要加入另一种图标的支持，使得博客可以显示出知乎、豆瓣这类的图标。

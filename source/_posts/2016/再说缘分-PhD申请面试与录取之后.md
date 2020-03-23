@@ -1,14 +1,11 @@
 ---
 title: 再说缘分：PhD 申请面试与录取之后
-categories:
-  - 学术向
-tags:
-  - PhD
-  - 申请季
-date: '2016-04-07 23:00:42'
+categories: [学术向]
+tags: [PhD, 申请季]
 sticky: 0
 mathjax: false
 comments: true
+date: 2016-04-07 23:00:42
 ---
 
 提交申请之后，其实主要就两件事情，其一是检查自己的材料是否提交齐全；其二是等待面试通知和参加面试。

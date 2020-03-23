@@ -1,15 +1,11 @@
 ---
 title: Hexo NexT 博客增加瀑布流相册页面
-categories:
-  - 随手记
-tags:
-  - JavaScript
-  - blog
-  - 技术
-date: '2018-06-11 12:24:01'
+categories: [随手记]
+tags: [JavaScript, blog, 技术]
 sticky: 0
 mathjax: false
 comments: true
+date: 2018-06-11 12:24:01
 ---
 
 要展示自己拍摄的照片，可以给博客添加一个瀑布流的相册页面。本文基于 Hexo 3.9.0 / NexT 7.3.0，参考了 [asdfv1929 的方法](https://asdfv1929.github.io/2018/05/26/next-add-photos/)。<!-- more -->
