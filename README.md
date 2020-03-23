@@ -1,12 +1,13 @@
-# <div align="center">班班碎碎念 ｜ BanbanRamble</div>
+# <div align="center"><a title="Donglei's blog repository" href="https://github.com/lei2rock/blog"><img align="center" height="75" src="https://user-images.githubusercontent.com/19180725/77292857-12320000-6d1c-11ea-87cf-9408f6f76a79.png"></a><br><a title="Donglei's blog repository" href="https://github.com/lei2rock/blog"><img align="center" height="45" src="https://user-images.githubusercontent.com/19180725/77292641-a8195b00-6d1b-11ea-8094-d6a0a1e39401.png"></a></div>
 
-[![Genertor](https://img.shields.io/badge/Generator-Hexo-0e83cd?&logo=hexo&style=flat-square)](https://hexo.io)
-[![Theme](https://img.shields.io/badge/Theme-NexT-181717.svg?&style=flat-square)](https://theme-next.org)
-[![Deploy](https://img.shields.io/github/workflow/status/lei2rock/blog/Deployment?label=GitHub+Actions&logo=GitHub+Actions&style=flat-square)](https://github.com/lei2rock/blog/actions)
+<p align="center">
+<br>
+<a href="https://hexo.io"><img src="https://img.shields.io/badge/Generator-Hexo-0e83cd?&logo=hexo&style=flat-square"></a>
+<a href="https://theme-next.org"><img src="https://img.shields.io/badge/Theme-NexT-181717.svg?&style=flat-square"></a>
+<a href="https://github.com/lei2rock/blog/actions"><img src="https://img.shields.io/github/workflow/status/lei2rock/blog/Deployment?label=GitHub+Actions&logo=GitHub+Actions&style=flat-square"></a>
+</p>
 
-The `src` branch of this repo contains all source files of my blog.
-
-## Copyright
+The `src` branch of this repository contains all source files of my blog.
 
 All articles and photos provided in this repository are licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/). For commercial use, please contact me by email first.
 
