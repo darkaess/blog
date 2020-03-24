@@ -24,7 +24,7 @@ jobs:
     - name: Setup Python
       uses: actions/setup-python@v1
       with:
-        python-version: '3.6'
+        python-version: '3.8'
 
 #    - name: Fix Wrong Update Time
 #      run: |
@@ -72,7 +72,7 @@ jobs:
         BUCKET: ${{ secrets.COS_BUCKET }}
         REGION: ${{ secrets.COS_REGION }}
       run: |
-        pip install coscmd
+        pip install -U coscmd
         coscmd config -a $SECRET_ID -s $SECRET_KEY -b $BUCKET -r $REGION -m 30
 
     - name: Deploy to COS
