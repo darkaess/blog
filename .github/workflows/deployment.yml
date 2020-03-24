@@ -16,10 +16,10 @@ jobs:
       with:
           submodules: true
 
-#    - name: Setup Node.js
-#      uses: actions/setup-node@v1.1.0
-#      with:
-#          node-version: '12.x'
+    - name: Setup Node.js
+      uses: actions/setup-node@v1.1.0
+      with:
+          node-version: '12.x'
 
     - name: Setup Python
       uses: actions/setup-python@v1
@@ -94,8 +94,8 @@ jobs:
         OSS_BUCKET: ${{ secrets.OSS_BUCKET }} #bucket name without endpoint domain
       run: |
         rm -rf public/css/ public/js/ public/images/
-        ossutil rm oss://$OSS_BUCKET/ -rf
-        ossutil cp public/ oss://$OSS_BUCKET/ -rf
+        ossutil rm -rf oss://$OSS_BUCKET/
+        ossutil cp -rf public/ oss://$OSS_BUCKET/
 
 #    - name: Deploy to Github for Backup
 #      env:
