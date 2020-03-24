@@ -8,7 +8,7 @@ comments: true
 date: 2018-06-11 12:24:01
 ---
 
-要展示自己拍摄的照片，可以给博客添加一个瀑布流的相册页面。本文基于 Hexo 3.9.0 / NexT 7.3.0，参考了 [asdfv1929 的方法](https://asdfv1929.github.io/2018/05/26/next-add-photos/)。<!-- more -->
+要展示自己拍摄的照片，可以给博客添加一个瀑布流的相册页面。本文基于 Hexo 4.2.0 / NexT 7.7.2，参考了 [asdfv1929 的方法](https://asdfv1929.github.io/2018/05/26/next-add-photos/)。<!-- more -->
 
 ## 1. json 文件处理图片信息
 在博客根目录的 `/scripts/` 文件夹下新建一个 `phototool.js` 文件，内容如下。主要功能是访问照片文件夹，获取每张照片的大小和文件名，并生成对应的 `json` 文件：
@@ -66,7 +66,7 @@ node scripts/phototool.js  #生成对应的 json 文件
 ]
 ```
 
-## 2. 加载 js 文件和配置样式
+## 2. 加载 js 文件
 
 首先，在 `/source/js/` 目录下创建 `photo.js`：
 
@@ -106,7 +106,6 @@ photo ={
                   '</div>'
         }
         $(".ImageGrid").append(li);
-        //$(".ImageGrid").lazyload();
         this.minigrid();
     },
     minigrid: function() {
@@ -133,42 +132,17 @@ photo.init();
 {% endif %}
 ```
 
-在主题 CSS 自定义文件中设置好相册的样式：
-
-```css /source/_data/styles.styl
-.ImageGrid {
-  width: 100%;
-  max-width: 1040px;
-  margin: 0 auto;
-  text-align: center;
-}
-.card {
-  overflow: hidden;
-  transition: .3s ease-in-out;
-  border-radius: 8px;
-  background-color: #ddd;
-}
-.ImageInCard img {
-  padding: 0 0 0 0;
-  border-radius: 8px;
-}
-```
-
 因为这里利用到了主题注入功能，所以需要在**主题配置文件**启用该功能：
 
 ```diff /themes/next/_config.yml
  custom_file_path:
 -  #bodyEnd: source/_data/body-end.swig
 +  bodyEnd: source/_data/body-end.swig
--  #style: source/_data/styles.styl
-+  style: source/_data/styles.styl
 ```
 
-## 4. 开启 fancybox
-在主题配置文件中，一步一步按照说明安装和开启 `fancybox` 即可。
+## 3. 编辑相册页面
 
-## 5. 放入相册
-新建相册页面 ` hexo new page photos`，创建  `/source/photos/index.md`。编辑文档为以下内容：
+新建相册页 ` hexo new page photos`，创建  `/source/photos/index.md`，编辑为以下内容：
 
 ```markdown /source/photos/index.md
 ---
@@ -177,11 +151,32 @@ type: picture
 comments: true
 ---
 
+<style>
+  .ImageGrid {
+    width: 100%;
+    max-width: 1040px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .card {
+    overflow: hidden;
+    transition: .3s ease-in-out;
+    border-radius: 8px;
+    background-color: #ddd;
+  }
+  .ImageInCard img {
+    padding: 0 0 0 0;
+    border-radius: 8px;
+  }
+</style>
+
 <div class="ImageGrid"></div>
 
 ```
 
-在**主题配置文件**中的 `menu` 添加如下内容可以添加导航菜单：
+## 4. 主题配置文件设置
+
+在主题配置文件中，按照说明安装和开启 `fancybox` 。在 `menu` 添加如下内容可以添加相册页导航菜单：
 
 ```diff /themes/next/_config.yml
  menu:
