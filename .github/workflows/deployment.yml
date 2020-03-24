@@ -16,12 +16,12 @@ jobs:
       with:
           submodules: true
 
-    - name: Setup Node.js for use with actions
+    - name: Setup Node.js
       uses: actions/setup-node@v1.1.0
       with:
           node-version: '12.x'
 
-    - name: setup python
+    - name: Setup Python
       uses: actions/setup-python@v1
       with:
         python-version: '3.6'
@@ -45,6 +45,18 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-yarn-
 
+    - name: Get pip cache
+       id: pip-cache
+       run: |
+         python -c "from pip._internal.locations import USER_CACHE_DIR; print('::set-output name=dir::' + USER_CACHE_DIR)"
+
+    - uses: actions/cache@v1
+      with:
+        path: ${{ steps.pip-cache.outputs.dir }}
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+
     - name: Install Dependencies & Generate Static Files
       run: |
         export PATH="$PATH:$(yarn global bin)"
@@ -53,7 +65,7 @@ jobs:
         sed -i '18s/imageLink/imageLink.replace(\/\![0-9]{3,}x\/,"")/' themes/next/source/js/utils.js
         yarn build
 
-    - name: Setup COS cmd
+    - name: Setup COSCMD
       env:
         SECRET_ID: ${{ secrets.COS_SECRET_ID }}
         SECRET_KEY: ${{ secrets.COS_SECRET_KEY }}
@@ -65,7 +77,7 @@ jobs:
 
     - name: Deploy to COS
       run: |
-        coscmd upload -rs --delete public/css assets/css
+        coscmd upload -rs --delete public/css assets/blog-css
         coscmd upload -rs --delete public/js assets/js
         coscmd upload -rs --delete source/images assets/img
 
