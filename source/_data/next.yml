@@ -123,8 +123,8 @@ menu:
     series: /series/ || cube
     tags: /tags/ || tags
   photos: /photos/ || camera-retro
-  about:
-    default: /about/ || location-arrow
+  more:
+    default: /more/ || location-arrow
     share: /share/ || share-alt
     friends: /friends/ || heart
   home: https://dlzhang.com || home
