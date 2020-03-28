@@ -15,6 +15,8 @@ zh-CN:
     in: 分类：
     comments:
       valine: 评论
+    post_lang: 中文/
+    link_lang: English
   counter:
     tag_cloud:
       other: <i class="fa fa-fw fa-tags"></i> 目前共计 %d 个标签
