@@ -16,10 +16,14 @@ comments: true
 	  transition: .3s ease-in-out;
 	  border-radius: 8px;
 	  background-color: #ddd;
+	  padding: 1.3px;
 	}
 	.ImageInCard img {
 	  padding: 0 0 0 0;
 	  border-radius: 8px;
+	}
+	@media (prefers-color-scheme: dark) {
+	  .card {background-color: #333;}
 	}
 </style>
 
