@@ -17,10 +17,11 @@ comments: true
   <span class="with-love" id="animate2"><i class="fa fa-heart"></i></span>
 </div>
 <br>
+
 {% note success %}
 **[友链格式]**
 网站名称：班班碎碎念
 网站链接：https://blog.dlzhang.com
 网站描述：无曰已是 无曰遂真
-网站 Logo：https://cdn.v2ex.com/gravatar/cc763511474fe24ffcc80257fb7cb970?size=300
+网站标识：https://cdn.v2ex.com/gravatar/cc763511474fe24ffcc80257fb7cb970?size=300
 {% endnote %}
