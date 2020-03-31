@@ -6,7 +6,7 @@
 title: 班班碎碎念
 subtitle: 无曰已是 无曰遂真
 description: 目前坐标香港，喜欢看一些纪录片和美剧，也喜欢折腾数码产品。有时会看看书、玩玩游戏，没事胡思乱想碎碎念。本站主要记录一些日常生活、碎碎念与科研随笔。
-keywords: [Donglei, 班班, 碎碎念]
+keywords: [班班, 碎碎念, 博客, blog]
 author: 班班
 language: zh-CN
 timezone: Asia/Shanghai
@@ -67,7 +67,7 @@ index_generator:
   order_by: -date
   
 # Category & Tag
-default_category: uncategorized
+default_category: 碎碎念
 category_map:
   学术向: academic
   碎碎念: ramble
@@ -99,20 +99,27 @@ include:
 exclude:
 ignore:
 
-# Extensions
-## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
-theme: next
-
-# Hexo server module
-## Use `hexo server`
-server:
-  port: 4000
-  ip: 127.0.0.1
-
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   - type: git
     repo: https://GH_TOKEN@github.com/lei2rock/blog.git
     branch: master
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: next
+
+## Hexo server module
+## Use `hexo server`
+server:
+  port: 4000
+  ip: 127.0.0.1
+
+## Sitemap
+## https://github.com/ludoviclefevre/hexo-generator-seo-friendly-sitemap
+sitemap:
+    path: sitemap.xml
+    tag: false
+    category: false
