@@ -32,8 +32,6 @@ i18n_dir: :lang
 skip_render:
   - README.md
   - 404.html
-  - js/photos.js
-  - js/friends.js
   - posts/**
 
 # Writing
@@ -116,10 +114,3 @@ theme: next
 server:
   port: 4000
   ip: 127.0.0.1
-
-## Sitemap
-## https://github.com/ludoviclefevre/hexo-generator-seo-friendly-sitemap
-sitemap:
-    path: sitemap.xml
-    tag: false
-    category: false
