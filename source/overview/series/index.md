@@ -3,11 +3,9 @@ title: 专栏文章
 comments: false
 ---
 
-<style>
-.post-body a {border-bottom:none;}
-</style>
+<style>.post-body a {border-bottom:none;}</style>
 
-<center><i class="fa fa-cube"></i> 目前共计 5 个专栏</center>
+<center><i class="fas fa-cube"></i> 目前共计 5 个专栏</center>
 
 ## 政策讨论
 

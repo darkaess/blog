@@ -40,7 +40,7 @@ footer:
 
   # Icon between year and copyright info.
   icon:
-    name: fa fa-heart
+    name: fas fa-heart
     animated: true
     color: '#f06292'
 
@@ -53,9 +53,7 @@ footer:
 # ---------------------------------------------------------------
 
 scheme: Gemini
-
 darkmode: true
-
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -67,17 +65,17 @@ darkmode: true
 # When running the site in a subdirectory (e.g. yoursite.com/blog), remove the leading slash from link value (/archives -> archives).
 # External url should start with http:// or https://
 menu:
-  home: / || fa fa-home
+  home: / || fas fa-home
   overview: 
-    default: /overview/ || fa fa-th
-    series: /series/ || fa fa-cube
-    tags: /tags/ || fa fa-tags
-  photos: /photos/ || fa fa-camera-retro
+    default: /overview/ || fas fa-th
+    series: series/ || fas fa-cube
+    tags: tags/ || fas fa-tags
+  photos: /photos/ || fas fa-camera-retro
   more:
-    default: /more/ || fa fa-location-arrow
-    share: /share/ || fa fa-share-alt
-    friends: /friends/ || fa fa-heart
-  homepage: https://dlzhang.com || fa fa-globe
+    default: /more/ || fas fa-location-arrow
+    share: share/ || fas fa-share-alt
+    friends: friends/ || fas fa-heart
+  homepage: https://dlzhang.com || fas fa-globe
 
 
 # ---------------------------------------------------------------
@@ -87,12 +85,8 @@ menu:
 
 # Sidebar Avatar
 avatar:
-  # Replace the default image and set the url here.
   url: https://web-1256060851.file.myqcloud.com/images/blog-avatar.jpg
-  # If true, the avatar will be dispalyed in circle.
   rounded: true
-  # If true, the avatar will be rotated with the cursor.
-  rotated: false
 
 # Posts / Categories / Tags in sidebar.
 site_state: false
@@ -101,25 +95,17 @@ social:
   微博: https://weibo.com/1156774800 || fab fa-weibo
   Twitter: https://twitter.com/lei2rock || fab fa-twitter
   GitHub: https://github.com/lei2rock || fab fa-github
-  RSS: /atom.xml || fa fa-rss
+  RSS: /atom.xml || fas fa-rss
 
 social_icons:
-  enable: true
   icons_only: true
-  transition: false
 
 # Table of Contents in the Sidebar
-# Front-matter variable (unsupport wrap expand_all).
 toc:
-  enable: true
   # Automatically add list number to toc.
   number: false
   # If true, all words will placed on next lines if header width longer then sidebar width.
   wrap: true
-  # If true, all level of TOC in a post will be displayed, rather than the activated part of it.
-  expand_all: false
-  # Maximum heading depth of generated toc.
-  max_depth: 6
 
 
 # ---------------------------------------------------------------
@@ -131,11 +117,8 @@ read_more_btn: false
 
 post_meta:
   item_text: false
-  created_at: true
   updated_at:
     enable: false
-    another_day: true
-  categories: true
 
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
 tag_icon: true
@@ -143,7 +126,6 @@ tag_icon: true
 reward_settings:
   # If true, reward will be displayed in every article by default.
   enable: true
-  animation: false
   comment: 🍭 支持一根棒棒糖！
 
 reward:
@@ -217,14 +199,6 @@ back2top:
 # Font Settings
 # See: https://theme-next.org/docs/theme-settings/#Fonts-Customization
 # ---------------------------------------------------------------
-# Find fonts on Google Fonts (https://www.google.com/fonts)
-# All fonts set here will have the following styles:
-#   light | light italic | normal | normal italic | bold | bold italic
-# Be aware that setting too much fonts will cause site running slowly
-# ---------------------------------------------------------------
-# To avoid space between header and sidebar in scheme Pisces / Gemini, Web Safe fonts are recommended for `global` (and `title`):
-# Arial | Tahoma | Helvetica | Times New Roman | Courier New | Verdana | Georgia | Palatino | Garamond | Comic Sans MS | Trebuchet MS
-# ---------------------------------------------------------------
 
 font:
   enable: true
@@ -270,18 +244,11 @@ font:
 # SEO Settings
 # ---------------------------------------------------------------
 
-# Disable Baidu transformation on mobile devices.
-disable_baidu_transformation: true
-
-# Google Webmaster tools verification.
-# See: https://www.google.com/webmasters
 google_site_verification: SJUudYL5q_atXSgew2qwy69FXOnSnNB2rAmwHmcBT9U
 
-# Baidu Webmaster tools verification.
-# See: https://ziyuan.baidu.com/site
+# Disable Baidu transformation on mobile devices.
+disable_baidu_transformation: true
 baidu_site_verification: wvc37nzEad
-
-# Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO.
 baidu_push: true
 
 
@@ -295,7 +262,6 @@ baidu_push: true
 #   - CDNJS (cdnjs.cloudflare.com), provided by cloudflare
 # ---------------------------------------------------------------
 
-# Math Formulas Render Support
 math:
   # hexo-renderer-pandoc (or hexo-renderer-kramed) required for full MathJax support.
   mathjax:
@@ -333,7 +299,7 @@ valine:
   avatar: wavatar # Gravatar style
   guest_info: nick,mail,link # Custom comment header, nick,mail,link 
   pageSize: 5 # Pagination size
-  language: # Language, available values: en, zh-cn
+  language: zh-cn # Language, available values: en, zh-cn
   visitor: false # Article reading statistic
   comment_count: true # If false, comment count will only be displayed in post page, not in home page
   recordIP: true # Whether to record the commenter IP
@@ -389,11 +355,6 @@ local_search:
 
 # Note tag (bs-callout)
 note:
-  # Note tag style values:
-  #  - simple    bs-callout old alert style. Default.
-  #  - modern    bs-callout new (v2-v3) alert style.
-  #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
-  #  - disabled  disable all CSS styles import of note tag.
   style: flat
   icons: true
   # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
@@ -415,16 +376,10 @@ tabs:
 motion:
   enable: false
 
-
 #! ---------------------------------------------------------------
-#! DO NOT EDIT THE FOLLOWING SETTINGS
-#! UNLESS YOU KNOW WHAT YOU ARE DOING
-#! See: https://theme-next.org/docs/advanced-settings
+#! CDN: https://theme-next.org/docs/advanced-settings
 #! ---------------------------------------------------------------
 
-# Script Vendors. Set a CDN address for the vendor you want to customize.
-# Be aware that you would better use the same version as internal ones to avoid potential problems.
-# Remember to use the https protocol of CDN files when you enable https on your site.
 vendors:
 
   anime: //cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js

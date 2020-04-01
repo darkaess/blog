@@ -7,7 +7,7 @@ comments: true
 
 {% tabs share %}
 
-<!-- tab 书单 @fa fa-book -->
+<!-- tab 书单 @fas fa-book -->
 ### 1.1 在读书目
 
 - [**明朝那些事儿**](https://book.douban.com/subject/6878988/). 当年明月
@@ -52,7 +52,7 @@ comments: true
 - [**他改变了中国**](https://book.douban.com/subject/1258378/). 罗伯特 · 劳伦斯 · 库恩
 <!-- endtab -->
 
-<!-- tab 纪录片 @fa fa-video -->
+<!-- tab 纪录片 @fas fa-video -->
 一些自己看过的优秀纪录片，以 CCTV 与 BBC 拍摄的纪录片为主，类型大多属于人文历史或者社会纪实。自然地理方面的纪录片很少，大概这个题材的拍摄风格大多不太喜欢。
 
 ### 2.1 国产纪录片

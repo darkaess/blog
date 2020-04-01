@@ -15,11 +15,11 @@ date: 2018-06-13 04:21:54
 - 本文适用于 Hexo 4.2.0 / NexT 7.7.1<!-- more -->
 
 ## 1. 下载图标
-首先，前往 [阿里巴巴矢量库](http://www.iconfont.cn/) 挑选需要的图标，在图标上点击 <i class="fa fa-shopping-cart"></i> 加入购物车。
+首先，前往 [阿里巴巴矢量库](http://www.iconfont.cn/) 挑选需要的图标，在图标上点击 <i class="fas fa-shopping-cart"></i> 加入购物车。
 
 ![阿里巴巴矢量库](https://web-1256060851.file.myqcloud.com/images/2018/Hexo-NexT-博客增加知乎豆瓣图标支持/iconfont.png!500x)
 
-然后，点击页面右上方 <i class="fa fa-shopping-cart"></i> 进入购物车，选择「下载代码」。
+然后，点击页面右上方 <i class="fas fa-shopping-cart"></i> 进入购物车，选择「下载代码」。
 
 ![购物车下载代码](https://web-1256060851.file.myqcloud.com/images/2018/Hexo-NexT-博客增加知乎豆瓣图标支持/download.png!300x)
 

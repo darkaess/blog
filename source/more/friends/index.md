@@ -14,9 +14,9 @@ comments: true
 ------
 
 <div style="text-align:center;font-weight:bold;">
-  <span class="with-love" id="animate1"><i class="fa fa-heart"></i></span>
+  <span class="with-love" id="animate1"><i class="fas fa-heart"></i></span>
   欢迎在评论区分享你的最爱
-  <span class="with-love" id="animate2"><i class="fa fa-heart"></i></span>
+  <span class="with-love" id="animate2"><i class="fas fa-heart"></i></span>
 </div>
 <br>
 
