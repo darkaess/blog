@@ -1,9 +1,24 @@
+var imgDataPath = '/photos/photoslist.json'; //图片名称高宽信息json文件路径
+var imgPath = 'https://web-1256060851.file.myqcloud.com/images/photos/';  //图片访问路径
+var imgMaxNum = 50; //图片显示数量
+
+var windowWidth = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+if (windowWidth < 767) {
+    var imageWidth = 145; //图片显示宽度(手机)
+} else {
+    var imageWidth = 215; //图片显示宽度
+}
+
+var imgStyle = '!' + imageWidth + 'x'; //腾讯云图片处理样式
+
 photo = {
     page: 1,
-    offset: 100,
+    offset: imgMaxNum,
     init: function () {
         var that = this;
-        $.getJSON("/photos/photoslist.json", function (data) {
+        $.getJSON(imgDataPath, function (data) {
             that.render(that.page, data);
             //that.scroll(data);
         });
@@ -19,10 +34,10 @@ photo = {
            imageSize = data[i].split(' ')[0];
            imageX = imageSize.split('.')[0];
            imageY = imageSize.split('.')[1];
-            li += '<div class="card" style="width:213px">' +
-                    '<div class="ImageInCard" style="height:'+ 213 * imageY / imageX + 'px">' +
-                      '<a data-fancybox="gallery" href="https://web-1256060851.file.myqcloud.com/images/photos/' + imgNameWithPattern + '" data-caption="' + imgName + '" title="' +  imgName + '">' +
-                        '<img data-src="https://web-1256060851.file.myqcloud.com/images/photos/' + imgNameWithPattern + '!213x" src="https://web-1256060851.file.myqcloud.com/images/photos/' + imgNameWithPattern + '!213x" data-loaded="true">' +
+            li += '<div class="card" style="width:' + imageWidth + 'px" >' +
+                    '<div class="ImageInCard" style="height:'+ imageWidth * imageY / imageX + 'px">' +
+                      '<a data-fancybox="gallery" href="' + imgPath + imgNameWithPattern + '" data-caption="' + imgName + '" title="' +  imgName + '">' +
+                        '<img data-src="' + imgPath + imgNameWithPattern + imgStyle + ' " src="' + imgPath + imgNameWithPattern + imgStyle + ' " data-loaded="true">' +
                       '</a>' +
                     '</div>' +
                   '</div>'

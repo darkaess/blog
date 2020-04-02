@@ -8,7 +8,7 @@ comments: true
 date: 2018-06-11 12:24:01
 ---
 
-要展示自己拍摄的照片，可以给博客添加一个瀑布流的相册页面。本文基于 Hexo 4.2.0 / NexT 7.7.2，参考了 [asdfv1929 的方法](https://asdfv1929.github.io/2018/05/26/next-add-photos/)。<!-- more -->
+要展示自己拍摄的照片，可以给博客添加一个瀑布流的相册页面。本文适用于 Hexo 4.2.0 / NexT 7.8.0，参考了 [asdfv1929 的方法](https://asdfv1929.github.io/2018/05/26/next-add-photos/)。<!-- more -->
 
 ## 1. json 文件处理图片信息
 在博客根目录的 `/scripts/` 文件夹下新建一个 `phototool.js` 文件，内容如下。主要功能是访问照片文件夹，获取每张照片的大小和文件名，并生成对应的 `json` 文件：
@@ -51,7 +51,7 @@ date: 2018-06-11 12:24:01
 
 ```sh
 cd <folder-path>  #定位到 Hexo 博客目录
-npm install image-size --save #如果已安装了 image-size 可以跳过
+yarn add image-size #或者 npm install image-size --save
 node scripts/phototool.js  #生成对应的 json 文件
 ```
 
@@ -71,14 +71,25 @@ node scripts/phototool.js  #生成对应的 json 文件
 首先，在 `/source/js/` 目录下创建 `photo.js`：
 
 ```js /source/js/photo.js
-photo ={
+var imgDataPath = '/photos/photoslist.json'; //图片名称高宽信息json文件路径
+var imgPath = '/images/photos/';  //图片访问路径
+var imgMaxNum = 50; //图片显示数量
+
+var windowWidth = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+if (windowWidth < 767) {
+    var imageWidth = 145; //图片显示宽度(手机端)
+} else {
+    var imageWidth = 215; //图片显示宽度
+}
+
+photo = {
     page: 1,
-    //offset 用于设置照片数量的上限
-    offset: 100,
+    offset: imgMaxNum,
     init: function () {
         var that = this;
-        //这里设置的是刚才生成的 json 文件路径
-        $.getJSON("/photos/photoslist.json", function (data) {
+        $.getJSON(imgDataPath, function (data) {
             that.render(that.page, data);
             //that.scroll(data);
         });
@@ -94,15 +105,12 @@ photo ={
            imageSize = data[i].split(' ')[0];
            imageX = imageSize.split('.')[0];
            imageY = imageSize.split('.')[1];
-           //这里 250 指的是图片的宽度，可以根据自己的需要调整相册中照片的大小
-            li += '<div class="card" style="width:250px">' +
-                    '<div class="ImageInCard" style="height:'+ 250 * imageY / imageX + 'px">' +
-                    //href 和 src 的链接地址是相册照片外部链接，也可以放博客目录里
-                      '<a data-fancybox="gallery" href="/photos/images/' + imgNameWithPattern + '?raw=true" data-caption="' + imgName + '">' +
-                        '<img srcset="/photos/' + imgNameWithPattern + '?raw=true" src="/photos/' + imgNameWithPattern + '?raw=true"/>' +
+            li += '<div class="card" style="width:' + imageWidth + 'px" >' +
+                    '<div class="ImageInCard" style="height:'+ imageWidth * imageY / imageX + 'px">' +
+                      '<a data-fancybox="gallery" href="' + imgPath + imgNameWithPattern + '" data-caption="' + imgName + '" title="' +  imgName + '">' +
+                        '<img data-src="' + imgPath + imgNameWithPattern + ' " src="' + imgPath + imgNameWithPattern + ' " data-loaded="true">' +
                       '</a>' +
                     '</div>' +
-                    // '<div class="TextInCard">' + imgName + '</div>' +  //图片下显示文件名作为说明的功能
                   '</div>'
         }
         $(".ImageGrid").append(li);
@@ -152,22 +160,26 @@ comments: true
 ---
 
 <style>
-  .ImageGrid {
-    width: 100%;
-    max-width: 1040px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .card {
-    overflow: hidden;
-    transition: .3s ease-in-out;
-    border-radius: 8px;
-    background-color: #ddd;
-  }
-  .ImageInCard img {
-    padding: 0 0 0 0;
-    border-radius: 8px;
-  }
+	.ImageGrid {
+	  width: 100%;
+	  max-width: 1040px;
+	  margin: 0 auto;
+	  text-align: center;
+	}
+	.card {
+	  overflow: hidden;
+	  transition: .3s ease-in-out;
+	  border-radius: 8px;
+	  background-color: #efefef;
+	  padding: 1.4px;
+	}
+	.ImageInCard img {
+	  padding: 0;
+	  border-radius: 8px;
+	}
+	@media (prefers-color-scheme: dark) {
+	  .card {background-color: #333;}
+	}
 </style>
 
 <div class="ImageGrid"></div>
@@ -180,5 +192,5 @@ comments: true
 
 ```diff /themes/next/_config.yml
  menu:
-+  photos: /photos || camera-retro
++  photos: /photos/ || fas fa-camera-retro
 ```

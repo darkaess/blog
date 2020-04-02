@@ -32,7 +32,7 @@ date: 2018-06-06 18:03:02
 要使用 Hexo NexT 主题的博客，需要先配置好环境，安装 [Node.js](http://nodejs.org/) 和 [Git](https://git-scm.com/downloads)。安装完成后，在终端中输入以下命令安装 Hexo：
 
 ```sh
-sudo npm install -g hexo-cli #需要输入密码确认
+sudo yarn global add hexo-cli #需要输入密码确认，或者 npm install -g hexo-cli
 ```
 
 安装 Hexo 完成后，执行下列命令会在指定文件夹中新建所需要的文件：
@@ -40,7 +40,7 @@ sudo npm install -g hexo-cli #需要输入密码确认
 ```sh
 hexo init <folder-path>  #在指定文件夹中初始化 Hexo
 cd <folder-path>  #定位到 Hexo 博客目录
-npm install
+yarn install #或者 npm install
 ```
 
 新建完成后，指定文件夹的目录中：
@@ -91,7 +91,7 @@ deploy:
 
 ```sh
 #首次部署要先执行以下命令安装插件
-npm install hexo-deployer-git --save
+yarn add hexo-deployer-git #或者 npm i hexo-deployer-git --save
 #部署网站
 hexo deploy
 ```
@@ -148,7 +148,7 @@ git submodule add https://github.com/theme-next/hexo-theme-next themes/next
 
 ```sh
 cd <blog-path>
-npm install hexo-generator-sitemap --save
+yarn add hexo-generator-sitemap #或者 npm i hexo-generator-sitemap --save
 ```
 
 ### 3.3 与主题样式一致的404页面
@@ -173,7 +173,7 @@ permalink: /404
 
 ```sh
 cd <blog-path>
-npm install hexo-abbrlink --save
+yarn add hexo-abbrlink #或者 npm i hexo-abbrlink --save
 ```
 
 在站点配置文件中修改 `permalink`：
@@ -190,8 +190,10 @@ npm install hexo-abbrlink --save
 首先替换给文章排序索引的原有插件 `hexo-generator-index`，执行以下命令
 
 ```sh
-npm uninstall hexo-generator-index --save
-npm install hexo-generator-indexed --save
+yarn remove hexo-generator-index && yarn add hexo-generator-indexed
+
+#或者以下命令
+npm uni hexo-generator-index --save && npm i hexo-generator-indexed --save
 ```
 
 然后在需要置顶的文章的开头添加 `sticky` 控制文章置顶：

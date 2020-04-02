@@ -15,11 +15,11 @@ comments: true
 	  overflow: hidden;
 	  transition: .3s ease-in-out;
 	  border-radius: 8px;
-	  background-color: #ddd;
-	  padding: 1.3px;
+	  background-color: #efefef;
+	  padding: 1.4px;
 	}
 	.ImageInCard img {
-	  padding: 0 0 0 0;
+	  padding: 0;
 	  border-radius: 8px;
 	}
 	@media (prefers-color-scheme: dark) {
