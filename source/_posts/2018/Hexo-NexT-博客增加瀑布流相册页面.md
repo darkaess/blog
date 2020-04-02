@@ -78,7 +78,7 @@ var imgMaxNum = 50; //图片显示数量
 var windowWidth = window.innerWidth
 || document.documentElement.clientWidth
 || document.body.clientWidth;
-if (windowWidth < 767) {
+if (windowWidth < 768) {
     var imageWidth = 145; //图片显示宽度(手机端)
 } else {
     var imageWidth = 215; //图片显示宽度
@@ -160,26 +160,26 @@ comments: true
 ---
 
 <style>
-	.ImageGrid {
-	  width: 100%;
-	  max-width: 1040px;
-	  margin: 0 auto;
-	  text-align: center;
-	}
-	.card {
-	  overflow: hidden;
-	  transition: .3s ease-in-out;
-	  border-radius: 8px;
-	  background-color: #efefef;
-	  padding: 1.4px;
-	}
-	.ImageInCard img {
-	  padding: 0;
-	  border-radius: 8px;
-	}
-	@media (prefers-color-scheme: dark) {
-	  .card {background-color: #333;}
-	}
+.ImageGrid {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  text-align: center;
+}
+.card {
+  overflow: hidden;
+  transition: .3s ease-in-out;
+  border-radius: 8px;
+  background-color: #efefef;
+  padding: 1.4px;
+}
+.ImageInCard img {
+  padding: 0;
+  border-radius: 8px;
+}
+@media (prefers-color-scheme: dark) {
+  .card {background-color: #333;}
+}
 </style>
 
 <div class="ImageGrid"></div>

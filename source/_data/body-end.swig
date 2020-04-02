@@ -1,7 +1,12 @@
 {% if page.type ==='picture' %}
+  <link rel="stylesheet" href="https://web-1256060851.file.myqcloud.com/assets/blog-css/photos.css">
   <script src="https://web-1256060851.file.myqcloud.com/assets/js/photos.js"></script>
   <script src="//cdn.jsdelivr.net/npm/minigrid@3.1.1/dist/minigrid.min.js"></script>
 {% elif page.type === 'friends' %}
+  <link rel="stylesheet" href="https://web-1256060851.file.myqcloud.com/assets/blog-css/friends.css">
   <script src="https://web-1256060851.file.myqcloud.com/assets/js/friends.js"></script>
 {% endif %}
-<script src="https://web-1256060851.file.myqcloud.com/assets/js/comment-locate.js"></script>
+
+{% if page.comments or post.comments %}
+  <script src="https://web-1256060851.file.myqcloud.com/assets/js/comment-locate.js"></script>
+{% endif %}
