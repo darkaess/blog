@@ -1,4 +1,5 @@
-[{
+[
+	{
 		"nickname": "moliu",
 		"avatar": "https://cdn.jsdelivr.net/gh/moliusmile/moliusmile.github.io/aboutme/Denise2.jpg",
 		"site": "https://shuxinyang.com"
@@ -37,5 +38,10 @@
 		"nickname": "荷戟独彷徨",
 		"avatar": "https://cdn.jsdelivr.net/gh/guanqr/blog/static/icons/apple-touch-icon.png",
 		"site": "https://guanqr.com"
+	},
+	{
+		"nickname": "志军的博客",
+		"avatar": "https://www.azjhong.com/images/hires_3769461-os.png",
+		"site": "https://www.azjhong.com"
 	}
 ]
