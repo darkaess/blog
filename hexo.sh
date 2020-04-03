@@ -23,13 +23,13 @@ if [ "$answer" == "1" ] || [ "$answer" == "" ]; then
 	echo " "
 	printf "\033[32mINFO \033[0m 启动本地预览...\n";
 	echo " "
-	sed -i "" 's#https://web-1256060851.file.myqcloud.com/assets/blog-css#css#g' source/_data/next.yml
-	sed -i "" 's#https://web-1256060851.file.myqcloud.com/assets/js#js#g' source/_data/next.yml
+	sed -i "" 's#https://web-1256060851.file.myqcloud.com/assets/blog-css#css#g' _config.yml
+	sed -i "" 's#https://web-1256060851.file.myqcloud.com/assets/js#js#g' _config.yml
 	sed -i "" '18s/imageLink/imageLink.replace(\/\![0-9]{3,}x\/,"")/' themes/next/source/js/utils.js
 	hexo s
 	hexo clean
-	sed -i "" 's#css: css#css: https://web-1256060851.file.myqcloud.com/assets/blog-css#g' source/_data/next.yml
-	sed -i "" 's#js: js#js: https://web-1256060851.file.myqcloud.com/assets/js#g' source/_data/next.yml
+	sed -i "" 's#css: css#css: https://web-1256060851.file.myqcloud.com/assets/blog-css#g' _config.yml
+	sed -i "" 's#js: js#js: https://web-1256060851.file.myqcloud.com/assets/js#g' _config.yml
 	sed -i "" '18s/.replace(\/\!\[0-9\]{3,}x\/,\"\")//' themes/next/source/js/utils.js
 	exec ${HexoPath}/hexo.sh
 else
