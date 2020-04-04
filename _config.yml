@@ -401,6 +401,7 @@ theme_config:
     app_key: 5jRfX3rExENmJqhdzkRqPndP # <your app key>
     # Required for apps from CN region
     server_url: # <your server url>
+    security: false
 
   # ---------------------------------------------------------------
   # Search Services
