@@ -148,9 +148,8 @@ theme_config:
   # ---------------------------------------------------------------
 
   scheme: Gemini
-  darkmode: false
+  darkmode: true
   # Color style: Day of Mourning
-  # Disable darkmode first
   gray: true
 
   # ---------------------------------------------------------------
