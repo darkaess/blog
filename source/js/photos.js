@@ -29,16 +29,16 @@ photo = {
         if (begin >= data.length) return;
         var html, imgNameWithPattern, imgName, imageSize, imageX, imageY, li = "";
         for (var i = begin; i < end && i < data.length; i++) {
-           imgNameWithPattern = data[i].split(' ')[1];
-           imgName = imgNameWithPattern.split('.')[0]
-           imageSize = data[i].split(' ')[0];
-           imageX = imageSize.split('.')[0];
-           imageY = imageSize.split('.')[1];
+            imgNameWithPattern = data[i].split(' ')[1];
+            imgName = imgNameWithPattern.split('.')[0]
+            imageSize = data[i].split(' ')[0];
+            imageX = imageSize.split('.')[0];
+            imageY = imageSize.split('.')[1];
             li += '<div class="card" style="width:' + imageWidth + 'px" >' +
                     '<div class="ImageInCard" style="height:'+ imageWidth * imageY / imageX + 'px">' +
-                      '<a data-fancybox="gallery" href="' + imgPath + imgNameWithPattern + '" data-caption="' + imgName + '" title="' +  imgName + '">' +
+                        '<a data-fancybox="gallery" href="' + imgPath + imgNameWithPattern + '" data-caption="' + imgName + '" title="' +  imgName + '">' +
                         '<img data-src="' + imgPath + imgNameWithPattern + imgStyle + ' " src="' + imgPath + imgNameWithPattern + imgStyle + ' " data-loaded="true">' +
-                      '</a>' +
+                        '</a>' +
                     '</div>' +
                   '</div>'
         }
