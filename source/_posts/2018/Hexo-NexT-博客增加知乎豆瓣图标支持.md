@@ -2,9 +2,6 @@
 title: Hexo NexT 博客增加知乎豆瓣图标支持
 categories: [随手记]
 tags: [blog, CSS, 技术]
-sticky: 0
-mathjax: false
-comments: true
 date: 2018-06-13 04:21:54
 ---
 

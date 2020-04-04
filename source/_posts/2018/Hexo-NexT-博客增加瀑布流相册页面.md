@@ -2,9 +2,6 @@
 title: Hexo NexT 博客增加瀑布流相册页面
 categories: [随手记]
 tags: [JavaScript, blog, 技术]
-sticky: 0
-mathjax: false
-comments: true
 date: 2018-06-11 12:24:01
 ---
 

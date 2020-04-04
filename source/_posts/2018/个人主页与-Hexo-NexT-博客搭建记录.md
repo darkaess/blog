@@ -2,9 +2,6 @@
 title: 个人主页与 Hexo NexT 博客搭建记录
 categories: [随手记]
 tags: [blog, 技术]
-sticky: 0
-mathjax: false
-comments: true
 date: 2018-06-06 18:03:02
 ---
 

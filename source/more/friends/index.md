@@ -2,6 +2,8 @@
 title: 小伙伴们
 type: friends
 comments: true
+toc:
+  enable: false
 ---
 
 <style>
@@ -15,11 +17,7 @@ comments: true
 
 <div><div class="links-content"><div class="link-navigation" id="links1"></div></div></div>
 
----
-
-<div style="text-align:center;font-weight:bold;font-size:1.2em;">
-和班班交个朋友吧～
-</div>
+## 和班班交个朋友吧～
 
 如果您有意交换友情链接，敬请先将本站添加友链，然后在评论区留言，本站目前仅接受个人博客网站的友链申请（参考下方格式）。为了确保头像显示正确，建议使用 Gravatar 或者 jsDelivr 等服务。如果需要更新博客信息，请留言回复。
 
