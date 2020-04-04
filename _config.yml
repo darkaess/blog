@@ -128,9 +128,6 @@ image_minifier:
 
 theme_config:
 
-  # Color style: Day of Mourning
-  gray: true
-
   minify: true
 
   # Create your custom files in site directory `source/_data` and uncomment needed files below.
@@ -145,6 +142,16 @@ theme_config:
     variable: source/_data/variables.styl
     mixin: source/_data/mixins.styl
     style: source/_data/styles.styl
+
+  # ---------------------------------------------------------------
+  # Scheme & Color Settings
+  # ---------------------------------------------------------------
+
+  scheme: Gemini
+  darkmode: false
+  # Color style: Day of Mourning
+  # Disable darkmode first
+  gray: true
 
   # ---------------------------------------------------------------
   # Site Information Settings
@@ -165,14 +172,7 @@ theme_config:
       color: '#f06292'
     powered: false
 
-  # ---------------------------------------------------------------
-  # Scheme Settings
-  # ---------------------------------------------------------------
-
-  scheme: Gemini
-  darkmode: true
-
-  # ---------------------------------------------------------------
+  # ----------------------------------------------------------------
   # Menu Settings
   # ---------------------------------------------------------------
 
