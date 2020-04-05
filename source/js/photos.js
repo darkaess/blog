@@ -1,4 +1,4 @@
-var imgDataPath = '/photos/photoslist.json'; //图片名称高宽信息json文件路径
+var imgDataPath = '/photos/photoslist.json'; //图片名称尺寸信息json文件路径
 var imgPath = 'https://web-1256060851.file.myqcloud.com/images/photos/';  //图片访问路径
 var imgMaxNum = 50; //图片显示数量
 
