@@ -20,7 +20,6 @@ photo = {
         var that = this;
         $.getJSON(imgDataPath, function (data) {
             that.render(that.page, data);
-            //that.scroll(data);
         });
     },
     render: function (page, data) {

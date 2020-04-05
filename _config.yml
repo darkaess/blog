@@ -172,7 +172,7 @@ theme_config:
     icon:
       name: fas fa-heart
       animated: true
-      color: '#f06292'
+      color: "#f06292"
     powered: false
 
   # ----------------------------------------------------------------
@@ -376,7 +376,7 @@ theme_config:
     appkey: 5jRfX3rExENmJqhdzkRqPndP # Your leancloud application appkey
     placeholder: 来这里留下你的想法与观点～（回复提醒通过邮件发送） # Comment box placeholder
     avatar: wavatar # Gravatar style
-    guest_info: nick,mail,link # Custom comment header, nick,mail,link 
+    guest_info: nick,mail # Custom comment header, nick,mail,link 
     pageSize: 5 # Pagination size
     language: zh-cn # Language, available values: en, zh-cn
     visitor: false # Article reading statistic
@@ -459,7 +459,7 @@ theme_config:
     pangu: //cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js
 
     # valine: //cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js
-    valine: //cdn.jsdelivr.net/gh/xaoxuu/volantis@1.0/js/volantis.min.js
+    valine: //cdn.jsdelivr.net/gh/xCss/Valine@master/dist/Valine.min.js
 
   # Assets
   css: https://web-1256060851.file.myqcloud.com/assets/blog-css
