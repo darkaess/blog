@@ -14,12 +14,12 @@ jobs:
     - name: Checkout Source
       uses: actions/checkout@v2
       with:
-          submodules: true
+        submodules: true
 
     - name: Setup Node.js
-      uses: actions/setup-node@v1
+      uses: dcodeIO/setup-node-nvm@master
       with:
-          node-version: '10.x'
+        node-version: node
 
     - name: Setup Python
       uses: actions/setup-python@v1
