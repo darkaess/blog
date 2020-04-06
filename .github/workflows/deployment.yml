@@ -17,9 +17,9 @@ jobs:
         submodules: true
 
     - name: Setup Node.js
-      uses: dcodeIO/setup-node-nvm@master
+      uses: actions/setup-node@v1
       with:
-        node-version: node
+        node-version: '12.x'
 
     - name: Setup Python
       uses: actions/setup-python@v1
