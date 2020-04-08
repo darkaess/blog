@@ -37,7 +37,6 @@ skip_render:
   - README.md
   - 404.html
   - js/**
-  - posts/**
 
 # Writing
 new_post_name: :year/:title.md # File name of new posts
