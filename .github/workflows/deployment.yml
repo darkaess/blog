@@ -86,21 +86,41 @@ jobs:
         coscmd upload -rs --delete public/css assets/blog-css
         coscmd upload -rs --delete public/js assets/js
         coscmd upload -rs --delete source/images assets/img
-
-    - name: Setup Aliyun oss util
-      uses: manyuanrong/setup-ossutil@v1.0
-      with:
-        endpoint: ${{ secrets.OSS_ENDPOINT }}
-        access-key-id: ${{ secrets.OSS_KEY_ID }}
-        access-key-secret: ${{ secrets.OSS_KEY_SECRET }}
-
-    - name: Deploy html to oss
-      env:
-        OSS_BUCKET: ${{ secrets.OSS_BUCKET }} #bucket name without endpoint domain
-      run: |
         rm -rf public/css/ public/js/ public/images/
-        ossutil rm -rf oss://$OSS_BUCKET/
-        ossutil cp -rf public/ oss://$OSS_BUCKET/
+
+    - name: Deploy to server
+      uses: easingthemes/ssh-deploy@v2.0.9
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        ARGS: "-avz --delete"
+        SOURCE: "public/"
+        REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+        REMOTE_USER: ${{ secrets.REMOTE_USER }}
+        TARGET: ${{ secrets.REMOTE_TARGET }}
+
+    - name: Telegram Notification
+      if: cancelled() == false
+      uses: xinthink/action-telegram@v1.1
+      with:
+        botToken: ${{ secrets.TG_BOT_TOKEN }} #use telegram bot @BotFather
+        chatId: ${{ secrets.TG_CHAT_ID }} #use telegram bot @userinfobot
+        jobStatus: ${{ job.status }}
+        skipSuccess: false
+
+#    - name: Setup Aliyun oss util
+#      uses: manyuanrong/setup-ossutil@v1.0
+#      with:
+#        endpoint: ${{ secrets.OSS_ENDPOINT }}
+#        access-key-id: ${{ secrets.OSS_KEY_ID }}
+#        access-key-secret: ${{ secrets.OSS_KEY_SECRET }}
+
+#    - name: Deploy html to oss
+#      env:
+#        OSS_BUCKET: ${{ secrets.OSS_BUCKET }} #bucket name without endpoint domain
+#      run: |
+#        rm -rf public/css/ public/js/ public/images/
+#        ossutil rm -rf oss://$OSS_BUCKET/
+#        ossutil cp -rf public/ oss://$OSS_BUCKET/
 
 #    - name: Deploy to Github for Backup
 #      env:
@@ -114,12 +134,3 @@ jobs:
 #        git config --global user.email $GIT_EMAIL
 #        git commit -m "Site deployed by GitHub Actions"
 #        git push --force --quiet "https://$GH_TOKEN@$REPO" master:master
-
-    - name: Telegram Notification
-      if: cancelled() == false
-      uses: xinthink/action-telegram@v1.1
-      with:
-        botToken: ${{ secrets.TG_BOT_TOKEN }} #use telegram bot @BotFather
-        chatId: ${{ secrets.TG_CHAT_ID }} #use telegram bot @userinfobot
-        jobStatus: ${{ job.status }}
-        skipSuccess: false
